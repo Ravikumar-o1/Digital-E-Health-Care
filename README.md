@@ -16,3 +16,8 @@ The centralizing the medical  reports data to produce the best possible treatmen
     this problem and to avoid the hectic task of carrying reports along with them, we are motivated to 
     implement this project “E_HealthCare” which will make all the reports and data of patient 
     remotely available to the doctors anytime anywhere. 
+
+
+
+The system is implemented using the CNN, LSTM, NODEJS and ANGULAR 6. 
+
