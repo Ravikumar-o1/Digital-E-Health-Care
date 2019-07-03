@@ -1,0 +1,47 @@
+<!-- <p>name:{{ doctor.name }}</p>
+<p>age: {{ doctor.age }}</p>
+<p> degree: {{ doctor.degree }}</p>
+<p>exprerience: {{ doctor.experience }}</p> -->
+
+<!-- <div  style="width:400px" id="doctor"> -->
+<!-- <img class="card-img-top" src="img_avatar1.png" alt="Card image"> -->
+<!-- <div >
+      <h4 >Name: {{ doctor.name }}</h4>
+      <p >age: {{ doctor.age }}</p>
+      <p >gender: {{ doctor.gender }}</p>
+      <p >degree: {{ doctor.degree }}</p>
+      <p >specialist: {{ doctor.specialist }}</p>
+      <p >address: {{ doctor.address }}</p>
+      <p >mobile: {{ doctor.mobile }}</p>
+      <p >email: {{ doctor.email }}</p>
+      <p >city: {{ doctor.city }}</p>
+      <img src='http://localhost:8080/images/doctor/{{doctor.image}}' alt="image"> -->
+<!-- <p class="card-text">degree: {{ doctor.degree }}</p>
+      <p class="card-text">exprerience: {{ doctor.experience }}</p> -->
+<!-- <a href="#" class="btn btn-primary">See Profile</a> -->
+<!-- </div>
+  </div> -->
+
+<h2 style="text-align:center">Doctor's Profile</h2>
+
+<div class="card">
+    <img src="http://localhost:8080/images/doctor/{{ doctor.image }}" alt="doctor image" style="width:100%;height:300px">
+    <h1>{{ doctor.name }}</h1>
+    <div class="profilebody">
+        <p class="title">{{ doctor.degree }}</p>
+        <p>({{ doctor.specialist }} Specialist)</p>
+        <hr>
+        <p>Age: {{ doctor.age }}</p>
+        <p>Gender: {{ doctor.gender }}</p>
+        <p>Mobile: {{ doctor.mobile }}</p>
+        <p>Address: {{ doctor.address }}</p>
+        <p><button>Email: {{ doctor.email }}</button></p>
+        <div style="margin: 24px 0;">
+
+            <a href="#"><i class="fa fa-dribbble"></i></a>&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-linkedin"></i></a>&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-facebook"></i></a>
+        </div>
+    </div>
+</div>

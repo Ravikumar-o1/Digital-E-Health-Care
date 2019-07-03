@@ -1,0 +1,32 @@
+<!-- <form  (ngSubmit)="submit(frm)" #frm="ngForm">
+  <label for="uid" >UID:</label>
+  <input type="number"  name="uid" id="uid" ngModel>
+  <button type="submit" >Login</button>
+</form> -->
+<section class="appoinment-area section-gap relative">
+    <div class="container">
+      <div class="row align-items-center justify-content-end">
+        <div class="col-lg-6 no-padding appoinment-right">
+          <h1 class="text-white">
+            Patient<br>
+            Login
+          </h1>
+                    <form class="appoinment-form"  (ngSubmit)="submit(frm)" #frm="ngForm">
+                        <div class="row">
+                            <div class="col-lg-12 d-flex flex-column">
+                                <input type="number" name="uid" placeholder="Patient Aadhar Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Patient Aadhar Number'" class="form-control mt-20" required ngModel>
+                            </div>
+
+
+                            <div class="col-lg-12 d-flex justify-content-end send-btn">
+                                <button type="submit" class="primary-btn primary mt-20 text-uppercase ">Login</button>
+                            </div>
+
+                            <div class="alert-msg"></div>
+                        </div>
+                    </form>
+        </div>
+      </div>
+    </div>
+  </section>
+

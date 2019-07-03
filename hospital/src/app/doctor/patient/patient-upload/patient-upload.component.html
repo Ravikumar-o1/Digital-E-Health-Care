@@ -1,0 +1,58 @@
+<!-- <form (ngSubmit)="upload(frm)" #frm="ngForm">
+    <input type="text" name="summary" id="tp" ngModel>
+    <input type="text" name="disease" ngModel>
+    <input type="file" name="file" (change)="onFileSelected($event)" id="fl">
+    <button type="submit">upload</button>
+</form> -->
+
+
+<section class="appoinment-area section-gap relative" >
+    <div class="container">
+        <div class="row align-items-center justify-content-end">
+            <div class="col-lg-6 no-padding appoinment-right">
+                <h1 class="text-white">
+                    Upload Data
+                </h1>
+                <form class="appoinment-form" (ngSubmit)="upload(frm)" #frm="ngForm">
+                    <div class="row">
+                        <div class="col-lg-12 d-flex flex-column">
+                            <input type="text" name="disease" placeholder="disease" onfocus="this.placeholder = ''" onblur="this.placeholder = 'disease'" class="form-control mt-20" required ngModel>
+                        </div>
+                        <div class="col-lg-12 d-flex flex-column">
+                            <input type="text" name="summary" placeholder="summary" onfocus="this.placeholder = ''" onblur="this.placeholder = 'summary'" class="form-control mt-20" required ngModel>
+                        </div>
+                        <div class="col-lg-12 d-flex flex-column">
+                            <input type="file" name="file" (change)="onFileSelected($event)" placeholder="file" onfocus="this.placeholder = ''" onblur="this.placeholder = 'file'" class="form-control mt-20" required ngModel>
+                        </div>
+                        <div class="col-lg-12 d-flex justify-content-end send-btn">
+                            <button type="submit" class="primary-btn primary mt-20 text-uppercase ">Upload</button>
+                        </div>
+
+                        <div class="alert-msg"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <input type="file" name="photo" ng2FileSelect [uploader]="uploader" /> -->
+<!-- button to trigger the file upload when submitted -->
+<!-- <button type="button" class="btn btn-success btn-s"
+      (click)="uploader.uploadAll()"
+      [disabled]="!uploader.getNotUploadedItems().length">
+      Upload
+</button> -->
+
+
+<!-- <form>
+
+  <input id="myForm" type="file" name="file" (change)="postMethod($event.target.files)">
+</form> -->
+<!-- <  form class="form-inline" (ngSubmit)="submit(frm)" #frm="ngForm">
+  <label for="uid" class="mr-sm-2">UID:</label>
+  <input type="number" class="form-control mb-2 mr-sm-2" name="uid" id="uid" ngModel>
+  <input id="myForm" type="file" name="file" (change)="postMethod($event.target.files)">
+  <button type="submit" class="btn btn-primary mb-2">Login</button>
+</form>
+ -->

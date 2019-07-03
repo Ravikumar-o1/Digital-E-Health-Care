@@ -1,0 +1,59 @@
+<!-- <div >d_uid: {{record.doctor_uid}}</div>
+<button (click)="showProfile()" [disabled]="isActive">Doctor Profile</button>
+<div >p_uid: {{record.patient_uid}}</div>
+<div >disease:{{ record.summary}}</div>
+
+<div *ngIf="isActive">
+  {{  doctor.name }}
+  {{  doctor.degree }}
+  {{  doctor.specialist }}
+  {{  doctor.email }}
+  {{  doctor.image }}
+  <img src="http://localhost:8080/images/doctor/{{ doctor.image }}" alt="sdfb">
+</div> -->
+<div class="row">
+<div class="col-lg-6 offset-md-4 col-md-8 offset-md-2">
+    <div class="single-feature d-flex flex-row">
+        <div class="icon">
+            <span class="lnr lnr-heart-pulse"></span>
+        </div>
+        <div class="details">
+            <h2>{{ record.disease }}</h2>
+            
+            <blockquote style="font-size: 18px" [innerHtml]="record.image" style="text-align:center;background-color:rgb(200, 245, 247)"></blockquote>
+            <p style="font-size: 18px">
+                Summary:{{ record.summary}}
+            </p>
+            <p><button (click)="showProfile()" class="genric btn-success circle" [disabled]="isActive">Doctor Profile</button></p>
+        </div>
+    </div>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-6 offset-md-3 col-md-8 offset-md-2">
+<h2 *ngIf="isActive" style="text-align:center">Doctor's Profile</h2>
+
+<div class="card" *ngIf="isActive" >
+    <img src="http://localhost:8080/images/doctor/{{ doctor.image }}" alt="John" style="width:100%">
+    <h1>{{ doctor.name }}</h1>
+    <div class="profilebody">
+        <p class="title">{{ doctor.degree }}</p>
+        <p>({{ doctor.specialist }} Specialist)</p>
+        <hr>
+        <p>Age: {{ doctor.age }}</p>
+        <p>Gender: {{ doctor.gender }}</p>
+        <!-- <p>Mobile: {{ doctor.mobile }}</p> -->
+        <!-- <p>Email: {{ doctor.email }}</p> -->
+        <!-- <p>Address: {{ doctor.address }}</p> -->
+        <p><button>Email: {{ doctor.email }}</button></p>
+        <div style="margin: 24px 0;">
+
+            <a href="#"><i class="fa fa-dribbble"></i></a>&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-linkedin"></i></a>&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-facebook"></i></a>
+        </div>
+    </div>
+</div>
+</div>
+</div>

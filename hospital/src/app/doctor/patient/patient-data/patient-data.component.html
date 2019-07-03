@@ -1,0 +1,60 @@
+<br><br>
+<h1 class="typo-list">Patient's Record</h1>
+
+<footer class="footer-area section-gap">
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-lg-6  col-md-12 offset-lg-4">
+                <div class="single-footer-widget newsletter">
+                    <div id="mc_embed_signup">
+
+
+                        <div class="form-group row" style="width: 100%">
+                            <div class="col-lg-8 col-md-12">
+                                <input type="text" name="search" placeholder="disease" onfocus="this.placeholder = ''" onblur="this.placeholder = 'disease'" required="" [(ngModel)]="search">
+                                <div style="position: absolute; left: -5000px;">
+                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-12">
+                                <button class="nw-btn primary-btn" (click)="realtimeSearch()">search<span class="lnr lnr-arrow-right"></span></button>
+                            </div>
+                        </div>
+                        <div class="info"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- <input type="text" [(ngModel)]="search"> -->
+<!-- <button type="submit" (click)="realtimeSearch()"><i class="glyphicon glyphicon-search"></i></button> -->
+<!-- <div  *ngFor="let patientDt of this.patientService.patientData " id="main"> -->
+<!-- <div class="card-header">d_uid: {{patientDt.doctor_uid}}</div> -->
+<!-- <div class="card-header">p_uid: {{patientDt.patient_uid}}</div> -->
+<!-- <div >disease:{{ patientDt.summary}}</div>
+    <div  (click)="showData(patientDt)">view record</div>
+</div> -->
+<div class="section-top-border" *ngFor="let patientDt of this.patientService.patientData " id="main">
+    <h3 class="mb-30 col-lg-6 col-md-8 offset-md-2 offset-lg-3">{{ patientDt.disease }}</h3>
+    <div class="row">
+        <div class="col-lg-6 col-md-8 offset-md-2 offset-lg-3">
+            <blockquote class="generic-blockquote" style="background-color: #CEFF33  ">
+                <div style="font-size: 18px;color:black">summary:{{ patientDt.summary}}</div> <br><br>
+                <button class="genric-btn primary circle large" (click)="showData(patientDt)"><span style="font-size: 15px"> view record </span></button>
+            </blockquote>
+        </div>
+    </div>
+</div>
+<!-- <div class="card" *ngFor="let Dt of this.patientService.dataSearch " id="main">
+    <div class="card-header">d_uid: {{Dt.doctor_uid}}</div>
+     <div class="card-header">p_uid: {{Dt.patient_uid}}</div>
+    <div class="card-body">disease:{{ Dt.summary}}</div> -->
+<!-- <div class="card-footer" (click)="showData(patientDt)">summary:{{patientDt.summary}}</div> -->
+<!-- </div> -->

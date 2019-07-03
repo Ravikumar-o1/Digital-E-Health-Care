@@ -1,0 +1,41 @@
+<!-- <p>
+  Name:  {{ patient.name }} <br>
+ Age: {{ patient.age }} <br>
+</p> -->
+
+<!-- <div  style="width:400px" id="patient"> -->
+<!-- <img class="card-img-top" src="img_avatar1.png" alt="Card image"> -->
+<!-- <div >
+      <h4 >Name: {{ patient.name }}</h4>
+      <p >age: {{ patient.age }}</p>
+      <p >gender: {{ patient.gender }}</p>
+      <p >bloodgroup: {{ patient.bloodgroup }}</p>
+      <p >address: {{ patient.address }}</p>
+      <p >mobile: {{ patient.mobile }}</p>
+      <p >email: {{ patient.email }}</p>
+      <p >city: {{ patient.city }}</p>
+      <img src='http://localhost:8080/images/patient/{{ patient.image }}'>
+    </div>
+</div> -->
+
+<h2 style="text-align:center">Patient's Profile</h2>
+<div class="card">
+    <img src="http://localhost:8080/images/patient/{{ patient.image }}" alt="patient image" style="width:100%;height:300px">
+    <h1>{{ patient.name }}</h1>
+    <div class="profilebody">
+        <hr>
+        <p>Age: {{ patient.age }}</p>
+        <p>Bloodgroup: {{ patient.bloodgroup }}</p>
+        <p>Gender: {{ patient.gender }}</p>
+        <p>Mobile: {{ patient.mobile }}</p>
+        <p>Address: {{ patient.address }}</p>
+        <p><button>Email: {{ patient.email }}</button></p>
+        <div style="margin: 24px 0;">
+
+            <a href="#"><i class="fa fa-dribbble"></i></a>&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-linkedin"></i></a>&nbsp;&nbsp;
+            <a href="#"><i class="fa fa-facebook"></i></a>
+        </div>
+    </div>
+</div>
